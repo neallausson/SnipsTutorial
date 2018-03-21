@@ -1,0 +1,10 @@
+version: ''
+services:
+  tensorflow:
+    image: new_image:new_tag
+    ports:
+      - 8880:8880
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./shared:/notebooks
