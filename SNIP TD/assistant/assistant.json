@@ -1,0 +1,214 @@
+{
+  "name" : "DemoAssistant",
+  "intents" : [ {
+    "id" : "addSong",
+    "type" : "registry",
+    "version" : "0.0.11",
+    "language" : "fr",
+    "slots" : [ ],
+    "name" : "addSong",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "getInfos",
+    "type" : "registry",
+    "version" : "0.0.7",
+    "language" : "fr",
+    "slots" : [ ],
+    "name" : "getInfos",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "nextSong",
+    "type" : "registry",
+    "version" : "0.0.11",
+    "language" : "fr",
+    "slots" : [ ],
+    "name" : "nextSong",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "playAlbum",
+    "type" : "registry",
+    "version" : "0.0.9",
+    "language" : "fr",
+    "slots" : [ {
+      "name" : "album",
+      "id" : "slot_rJvg-oXa-",
+      "entity" : "",
+      "entityId" : "entity_QeNdwMBqZ5k",
+      "missingQuestion" : "Quel album voulez-vous écouter ?",
+      "required" : true,
+      "description" : "l'album à écouter"
+    } ],
+    "name" : "playAlbum",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "playArtist",
+    "type" : "registry",
+    "version" : "0.0.25",
+    "language" : "fr",
+    "slots" : [ {
+      "name" : "artist",
+      "id" : "slot_HkjMcJaob",
+      "entity" : "",
+      "entityId" : "entity_Az8G59XXvDD",
+      "missingQuestion" : "Quel artiste voulez-vous écouter ?",
+      "required" : true,
+      "description" : "l'artiste à écouter"
+    } ],
+    "name" : "playArtist",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "playPlaylist",
+    "type" : "registry",
+    "version" : "0.0.25",
+    "language" : "fr",
+    "slots" : [ {
+      "name" : "playlist_name_fr",
+      "id" : "slot_HJBblmVsb",
+      "entity" : "",
+      "entityId" : "entity_z1ONEWx936Y",
+      "missingQuestion" : "Quelle playlist ou genre voulez-vous écouter ?",
+      "required" : true,
+      "description" : "le nom de la playlist ou du genre Spotify à jouer"
+    }, {
+      "name" : "playlistModeLecture",
+      "id" : "slot_HyLwgm4ib",
+      "entity" : "",
+      "entityId" : "entity_g4B8qlgvdg1",
+      "missingQuestion" : "",
+      "required" : false,
+      "description" : "le mode de lecture souhaité"
+    } ],
+    "name" : "playPlaylist",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "playSong",
+    "type" : "registry",
+    "version" : "0.0.19",
+    "language" : "fr",
+    "slots" : [ {
+      "name" : "song",
+      "id" : "slot_rJ666tmTW",
+      "entity" : "",
+      "entityId" : "entity_xQ48XvgyVq6",
+      "missingQuestion" : "Quelle chanson voulez-vous écouter ?",
+      "required" : true,
+      "description" : "la chanson à écouter"
+    } ],
+    "name" : "playSong",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "previousSong",
+    "type" : "registry",
+    "version" : "0.0.7",
+    "language" : "fr",
+    "slots" : [ ],
+    "name" : "previousSong",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "radioOn",
+    "type" : "registry",
+    "version" : "0.0.21",
+    "language" : "fr",
+    "slots" : [ {
+      "name" : "radio_name_fr",
+      "id" : "slot_r15OLyXiZ",
+      "entity" : "",
+      "entityId" : "entity_qZXdq89lxlx",
+      "missingQuestion" : "Quelle radio voulez-vous écouter ?",
+      "required" : true,
+      "description" : "le nom de la radio choisie"
+    } ],
+    "name" : "radioOn",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "resumeMusic",
+    "type" : "registry",
+    "version" : "0.0.10",
+    "language" : "fr",
+    "slots" : [ ],
+    "name" : "resumeMusic",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "speakerInterrupt",
+    "type" : "registry",
+    "version" : "0.0.9",
+    "language" : "fr",
+    "slots" : [ ],
+    "name" : "speakerInterrupt",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "volumeDown",
+    "type" : "registry",
+    "version" : "0.0.22",
+    "language" : "fr",
+    "slots" : [ {
+      "name" : "volume_lower_fr",
+      "id" : "slot_BJXXkgmi-",
+      "entity" : "",
+      "entityId" : "entity_vvYKZrM6Z9q",
+      "missingQuestion" : "",
+      "required" : false,
+      "description" : "le nombre de niveaux dont on veut baisser le son de 1 à 10"
+    } ],
+    "name" : "volumeDown",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "volumeSet",
+    "type" : "registry",
+    "version" : "0.0.2",
+    "language" : "fr",
+    "slots" : [ {
+      "name" : "volume_set_fr",
+      "id" : "slot_imported_SkhZ7yUIITW",
+      "entity" : "",
+      "entityId" : "entity_04gxXYmXXp6",
+      "missingQuestion" : "",
+      "required" : false
+    } ],
+    "name" : "volumeSet",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  }, {
+    "id" : "volumeUp",
+    "type" : "registry",
+    "version" : "0.0.17",
+    "language" : "fr",
+    "slots" : [ {
+      "name" : "volume_higher_fr",
+      "id" : "slot_rJRdhJmj-",
+      "entity" : "",
+      "entityId" : "entity_04gxXYmXXp6",
+      "missingQuestion" : "",
+      "required" : false,
+      "description" : "le nombre de niveaux dont on veut monter le son de 1 à 10"
+    } ],
+    "name" : "volumeUp",
+    "confirmationRequired" : false,
+    "confirmationQuestion" : ""
+  } ],
+  "createdAt" : "2018-02-28T10:21:11.837Z",
+  "language" : "fr",
+  "nluEngine" : {
+    "version" : "0.12.0"
+  },
+  "platform" : {
+    "type" : "raspberrypi"
+  },
+  "asr" : {
+    "type" : "snips"
+  },
+  "analyticsEnabled" : true,
+  "hotword" : "hey_snips"
+}
