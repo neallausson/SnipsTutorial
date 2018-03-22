@@ -46,7 +46,7 @@ Supposant que votre dossier SNIPS_TD se trouve sur votre bureau
 
 Puis démarrer ce dockerfile Dans le même dossier que le fichier "docker-compose.yml" grâce à : 
 ```
-> docker-compose build
+> sudo docker-compose build
 ```
 
 A partir de là, vous devriez pouvoir tester le fichier test.py depuis votre ordinateur.
