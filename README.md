@@ -58,7 +58,7 @@ A partir de là, vous devriez pouvoir tester le fichier test.py depuis votre ord
 Dans le cas où l'installation de docker n'a pas été réussie ou que le docker file ne peut pas être éxécuté, il faut rentrer les lignes de comandes suivantes depuis la raspberry pi :
 
 ```
-> apt-get update && apt-get install -y --no-install-recommends \
+> apt-get update
 
 > apt-get install -y dirmngr
 
