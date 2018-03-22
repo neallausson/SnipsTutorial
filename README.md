@@ -53,6 +53,29 @@ A partir de là, vous devriez pouvoir tester le fichier test.py depuis votre ord
 ```
 > python3 test.py
 ```
+* Installation de SNIPS
+
+Dans le cas où l'installation de docker n'a pas été réussie ou que le docker file ne peut pas être éxécuté, il faut rentrer les lignes de comandes suivantes depuis la raspberry pi :
+
+```
+> apt-get update && apt-get install -y --no-install-recommends \
+
+> apt-get install -y dirmngr
+
+> bash -c  'echo "deb https://raspbian.snips.ai/$(lsb_release -cs) stable main" > /etc/apt/sources.list.d/snips.list'
+
+>  apt-key adv --keyserver pgp.mit.edu --recv-keys D4F50CDCA10A2849
+
+> apt-get update
+> apt-get install -y snips-platform-voice
+
+> rm -r /usr/share/snips/assistant
+
+> scp -r assistant /usr/share/snips/assistant
+
+> systemctl restart "snips*"
+```
+
 ## Mise ne place d'un second assistant
 
 * Dans un premier temps il faut créer un assistant depuis le site internet de [SNIPS](https://console.snips.ai/assistants/proj_9MBdrbdxddo?store=1)
