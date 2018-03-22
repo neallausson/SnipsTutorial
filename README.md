@@ -26,8 +26,7 @@ Depuis un bash ubuntu si possible pour utiliser la commende "ssh".
 Il faut alors installer docker sur la raspberry Pi
 
 ```
-> sudo apt-get update
-> sudo apt-get install docker-ce
+> curl -sSL get.docker.com | sh
 ```
 
 
