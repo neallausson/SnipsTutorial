@@ -1,4 +1,17 @@
 {
+  "entityNameToFilename": {
+    "album": "e_0.snips", 
+    "playlist": "e_1.snips", 
+    "song": "e_2.snips", 
+    "niveau": "e_3.snips", 
+    "artist": "e_4.snips", 
+    "radio": "e_5.snips", 
+    "mode": "e_6.snips"
+  }, 
+  "injectionsEngine": {
+    "version": 1
+  }, 
+  "language": "fr", 
   "decoderConfig": {
     "useFinalProbs": true, 
     "latticeBeamSize": 1.0, 
@@ -7,11 +20,12 @@
     "acousticScale": 0.83, 
     "beamSize": 10.0
   }, 
+  "cacheSizeDynamic": 536870912, 
   "asrModel": {
     "version": "0.1.0"
   }, 
   "asrLmAdaptation": {
-    "version": "0.7.2"
+    "version": "0.9.0"
   }, 
   "endpointingRules": {
     "rule3": {
@@ -21,7 +35,7 @@
       "mustContainNonsilence": true
     }, 
     "rule2": {
-      "maxRelativeCost": 3.5, 
+      "maxRelativeCost": 7.5, 
       "minTrailingSilence": 0.5, 
       "minUtteranceLength": 0.0, 
       "mustContainNonsilence": true
@@ -48,6 +62,251 @@
   "postprocessors": [
     {
       "Regex": {
+        "pattern": "`346b3413-8747-4b73-841b-75b613a1cb2a`START .[^`]*? `346b3413-8747-4b73-841b-75b613a1cb2a`DECOY`EMPTY `346b3413-8747-4b73-841b-75b613a1cb2a`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`346b3413-8747-4b73-841b-75b613a1cb2a`START .[^`]*? `346b3413-8747-4b73-841b-75b613a1cb2a`DECOY`INSIDE .*? `346b3413-8747-4b73-841b-75b613a1cb2a`END`DECOY `346b3413-8747-4b73-841b-75b613a1cb2a`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`346b3413-8747-4b73-841b-75b613a1cb2a`START`DECOY (.*?) `346b3413-8747-4b73-841b-75b613a1cb2a`END`DECOY", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`346b3413-8747-4b73-841b-75b613a1cb2a`START (.*?) `346b3413-8747-4b73-841b-75b613a1cb2a`END", 
+        "flags": "i", 
+        "replacement": "$1"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`346b3413-8747-4b73-841b-75b613a1cb2a`START ", 
+        "flags": "i", 
+        "replacement": ""
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`511b5616-0d85-40c4-a6e1-58ded68c08e6`START .[^`]*? `511b5616-0d85-40c4-a6e1-58ded68c08e6`DECOY`EMPTY `511b5616-0d85-40c4-a6e1-58ded68c08e6`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`511b5616-0d85-40c4-a6e1-58ded68c08e6`START .[^`]*? `511b5616-0d85-40c4-a6e1-58ded68c08e6`DECOY`INSIDE .*? `511b5616-0d85-40c4-a6e1-58ded68c08e6`END`DECOY `511b5616-0d85-40c4-a6e1-58ded68c08e6`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`511b5616-0d85-40c4-a6e1-58ded68c08e6`START`DECOY (.*?) `511b5616-0d85-40c4-a6e1-58ded68c08e6`END`DECOY", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`511b5616-0d85-40c4-a6e1-58ded68c08e6`START (.*?) `511b5616-0d85-40c4-a6e1-58ded68c08e6`END", 
+        "flags": "i", 
+        "replacement": "$1"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`511b5616-0d85-40c4-a6e1-58ded68c08e6`START ", 
+        "flags": "i", 
+        "replacement": ""
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`ea691f45-0877-4b04-a897-ee63553ca5f4`START .[^`]*? `ea691f45-0877-4b04-a897-ee63553ca5f4`DECOY`EMPTY `ea691f45-0877-4b04-a897-ee63553ca5f4`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`ea691f45-0877-4b04-a897-ee63553ca5f4`START .[^`]*? `ea691f45-0877-4b04-a897-ee63553ca5f4`DECOY`INSIDE .*? `ea691f45-0877-4b04-a897-ee63553ca5f4`END`DECOY `ea691f45-0877-4b04-a897-ee63553ca5f4`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`ea691f45-0877-4b04-a897-ee63553ca5f4`START`DECOY (.*?) `ea691f45-0877-4b04-a897-ee63553ca5f4`END`DECOY", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`ea691f45-0877-4b04-a897-ee63553ca5f4`START (.*?) `ea691f45-0877-4b04-a897-ee63553ca5f4`END", 
+        "flags": "i", 
+        "replacement": "$1"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`ea691f45-0877-4b04-a897-ee63553ca5f4`START ", 
+        "flags": "i", 
+        "replacement": ""
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`793798c1-da99-48f6-9721-d6b2f6c0e3d7`START .[^`]*? `793798c1-da99-48f6-9721-d6b2f6c0e3d7`DECOY`EMPTY `793798c1-da99-48f6-9721-d6b2f6c0e3d7`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`793798c1-da99-48f6-9721-d6b2f6c0e3d7`START .[^`]*? `793798c1-da99-48f6-9721-d6b2f6c0e3d7`DECOY`INSIDE .*? `793798c1-da99-48f6-9721-d6b2f6c0e3d7`END`DECOY `793798c1-da99-48f6-9721-d6b2f6c0e3d7`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`793798c1-da99-48f6-9721-d6b2f6c0e3d7`START`DECOY (.*?) `793798c1-da99-48f6-9721-d6b2f6c0e3d7`END`DECOY", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`793798c1-da99-48f6-9721-d6b2f6c0e3d7`START (.*?) `793798c1-da99-48f6-9721-d6b2f6c0e3d7`END", 
+        "flags": "i", 
+        "replacement": "$1"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`793798c1-da99-48f6-9721-d6b2f6c0e3d7`START ", 
+        "flags": "i", 
+        "replacement": ""
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`00e79e84-605e-43b5-91f8-19e73d74e235`START .[^`]*? `00e79e84-605e-43b5-91f8-19e73d74e235`DECOY`EMPTY `00e79e84-605e-43b5-91f8-19e73d74e235`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`00e79e84-605e-43b5-91f8-19e73d74e235`START .[^`]*? `00e79e84-605e-43b5-91f8-19e73d74e235`DECOY`INSIDE .*? `00e79e84-605e-43b5-91f8-19e73d74e235`END`DECOY `00e79e84-605e-43b5-91f8-19e73d74e235`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`00e79e84-605e-43b5-91f8-19e73d74e235`START`DECOY (.*?) `00e79e84-605e-43b5-91f8-19e73d74e235`END`DECOY", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`00e79e84-605e-43b5-91f8-19e73d74e235`START (.*?) `00e79e84-605e-43b5-91f8-19e73d74e235`END", 
+        "flags": "i", 
+        "replacement": "$1"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`00e79e84-605e-43b5-91f8-19e73d74e235`START ", 
+        "flags": "i", 
+        "replacement": ""
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`082eb9fa-2871-4bda-9f16-bbdc22c7819b`START .[^`]*? `082eb9fa-2871-4bda-9f16-bbdc22c7819b`DECOY`EMPTY `082eb9fa-2871-4bda-9f16-bbdc22c7819b`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`082eb9fa-2871-4bda-9f16-bbdc22c7819b`START .[^`]*? `082eb9fa-2871-4bda-9f16-bbdc22c7819b`DECOY`INSIDE .*? `082eb9fa-2871-4bda-9f16-bbdc22c7819b`END`DECOY `082eb9fa-2871-4bda-9f16-bbdc22c7819b`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`082eb9fa-2871-4bda-9f16-bbdc22c7819b`START`DECOY (.*?) `082eb9fa-2871-4bda-9f16-bbdc22c7819b`END`DECOY", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`082eb9fa-2871-4bda-9f16-bbdc22c7819b`START (.*?) `082eb9fa-2871-4bda-9f16-bbdc22c7819b`END", 
+        "flags": "i", 
+        "replacement": "$1"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`082eb9fa-2871-4bda-9f16-bbdc22c7819b`START ", 
+        "flags": "i", 
+        "replacement": ""
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`df114872-7083-4ccb-9396-ea42a9183d7c`START .[^`]*? `df114872-7083-4ccb-9396-ea42a9183d7c`DECOY`EMPTY `df114872-7083-4ccb-9396-ea42a9183d7c`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`df114872-7083-4ccb-9396-ea42a9183d7c`START .[^`]*? `df114872-7083-4ccb-9396-ea42a9183d7c`DECOY`INSIDE .*? `df114872-7083-4ccb-9396-ea42a9183d7c`END`DECOY `df114872-7083-4ccb-9396-ea42a9183d7c`END", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`df114872-7083-4ccb-9396-ea42a9183d7c`START`DECOY (.*?) `df114872-7083-4ccb-9396-ea42a9183d7c`END`DECOY", 
+        "flags": "i", 
+        "replacement": "unknownword"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`df114872-7083-4ccb-9396-ea42a9183d7c`START (.*?) `df114872-7083-4ccb-9396-ea42a9183d7c`END", 
+        "flags": "i", 
+        "replacement": "$1"
+      }
+    }, 
+    {
+      "Regex": {
+        "pattern": "`df114872-7083-4ccb-9396-ea42a9183d7c`START ", 
+        "flags": "i", 
+        "replacement": ""
+      }
+    }, 
+    {
+      "Regex": {
         "pattern": "`PATTERN`DECOY`START .*? `PATTERN`DECOY`END", 
         "flags": "i", 
         "replacement": "unknownword"
@@ -56,5 +315,97 @@
   ], 
   "asrEngine": {
     "version": "0.1.0"
+  }, 
+  "entitiesFstMap": [
+    [
+      1690, 
+      "__root__"
+    ], 
+    [
+      1691, 
+      "e_0.snips"
+    ], 
+    [
+      1692, 
+      "e_1.snips"
+    ], 
+    [
+      1693, 
+      "e_2.snips"
+    ], 
+    [
+      1694, 
+      "e_3.snips"
+    ], 
+    [
+      1695, 
+      "e_4.snips"
+    ], 
+    [
+      1696, 
+      "e_5.snips"
+    ], 
+    [
+      1697, 
+      "e_6.snips"
+    ]
+  ], 
+  "entityNameToDisambigs": {
+    "album": {
+      "start": "`346b3413-8747-4b73-841b-75b613a1cb2a`START", 
+      "end": "`346b3413-8747-4b73-841b-75b613a1cb2a`END", 
+      "empty": [
+        "`346b3413-8747-4b73-841b-75b613a1cb2a`DECOY`EMPTY", 
+        2
+      ]
+    }, 
+    "playlist": {
+      "start": "`511b5616-0d85-40c4-a6e1-58ded68c08e6`START", 
+      "end": "`511b5616-0d85-40c4-a6e1-58ded68c08e6`END", 
+      "empty": [
+        "`511b5616-0d85-40c4-a6e1-58ded68c08e6`DECOY`EMPTY", 
+        2
+      ]
+    }, 
+    "artist": {
+      "start": "`00e79e84-605e-43b5-91f8-19e73d74e235`START", 
+      "end": "`00e79e84-605e-43b5-91f8-19e73d74e235`END", 
+      "empty": [
+        "`00e79e84-605e-43b5-91f8-19e73d74e235`DECOY`EMPTY", 
+        2
+      ]
+    }, 
+    "niveau": {
+      "start": "`793798c1-da99-48f6-9721-d6b2f6c0e3d7`START", 
+      "end": "`793798c1-da99-48f6-9721-d6b2f6c0e3d7`END", 
+      "empty": [
+        "`793798c1-da99-48f6-9721-d6b2f6c0e3d7`DECOY`EMPTY", 
+        2
+      ]
+    }, 
+    "song": {
+      "start": "`ea691f45-0877-4b04-a897-ee63553ca5f4`START", 
+      "end": "`ea691f45-0877-4b04-a897-ee63553ca5f4`END", 
+      "empty": [
+        "`ea691f45-0877-4b04-a897-ee63553ca5f4`DECOY`EMPTY", 
+        2
+      ]
+    }, 
+    "radio": {
+      "start": "`082eb9fa-2871-4bda-9f16-bbdc22c7819b`START", 
+      "end": "`082eb9fa-2871-4bda-9f16-bbdc22c7819b`END", 
+      "empty": [
+        "`082eb9fa-2871-4bda-9f16-bbdc22c7819b`DECOY`EMPTY", 
+        2
+      ]
+    }, 
+    "mode": {
+      "start": "`df114872-7083-4ccb-9396-ea42a9183d7c`START", 
+      "end": "`df114872-7083-4ccb-9396-ea42a9183d7c`END", 
+      "empty": [
+        "`df114872-7083-4ccb-9396-ea42a9183d7c`DECOY`EMPTY", 
+        2
+      ]
+    }
   }
 }
